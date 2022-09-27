@@ -10,7 +10,7 @@
           <h6>Author: {{ book.author }}</h6>
           <h6>Genre: {{ book.genre }}</h6>
           <h6>Description: {{ book.description }}</h6>
-          <h6>Rating: {{ book.rating }}</h6>
+          <h6>Rating: {{ book.rating }}/10</h6>
           <div class="buttons">
             <button mat-button (click)="updateBook(book)">Update</button>
             <button mat-button (click)="deleteBook(book)">Delete</button>

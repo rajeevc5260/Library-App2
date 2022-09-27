@@ -18,6 +18,8 @@ import { BooksComponent } from './Components/books/books.component';
 import { AddBookComponent } from './Components/add-book/add-book.component';
 import { UpdateBookComponent } from './Components/update-book/update-book.component';
 import { MatCardModule } from "@angular/material/card";
+import { AuthService } from './Services/auth.service';
+import { BooksService } from './Services/books.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,7 @@ import { MatCardModule } from "@angular/material/card";
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [AuthService, BooksService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -2,11 +2,15 @@ const express = require("express");
 const cors = require("cors");
 const authData = require("./src/model/authData");
 const booksData = require("./src/model/booksData");
+const jwt = require("jsonwebtoken");
 
 const app = express();
 const PORT = 3000;
 app.use(cors());
 app.use(express.json());
+
+var username = "admin@gmail.com";
+var password = "Admin@123";
 
 // Sign up form data POST
 app.post("/signUp", (req, res) => {
@@ -103,6 +107,21 @@ app.delete("/remove/:id", (req, res) => {
       res.json(deleteBook);
     }
   });
+});
+
+// login
+app.post("/login", (req, res) => {
+  let userData = req.body;
+
+  if (!username) {
+    res.status(401).send("Invalid Username");
+  } else if (password !== userData.password) {
+    res.status(401).send("Invalid Password");
+  } else {
+    let payload = { subject: username + password };
+    let token = jwt.sign(payload, "secretKey");
+    res.status(200).send({ token });
+  }
 });
 
 app.listen(PORT, () => {

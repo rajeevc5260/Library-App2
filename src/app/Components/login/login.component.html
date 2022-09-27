@@ -3,14 +3,14 @@
     <mat-icon>account_circle</mat-icon>
     <h3>LOGIN</h3>
     <div class="mb-3">
-      <input type="email" name="email" #email="ngModel" [(ngModel)]="loginDetails.email" [class.is-invalid]="email.invalid && email.touched" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="Email" required="required"/>
+      <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" [class.is-invalid]="email.invalid && email.touched" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="Email" required="required"/>
       <small [class.d-none]="email.valid || email.untouched">*Enter valid email</small>
     </div>
     <div class="mb-3">
-      <input type="password" name="password" #password="ngModel" [(ngModel)]="loginDetails.password" [class.is-invalid]="password.invalid && password.touched"  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" class="form-control" placeholder="Password" required="required"/>
+      <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" [class.is-invalid]="password.invalid && password.touched"  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" class="form-control" placeholder="Password" required="required"/>
       <small [class.d-none]="password.valid || password.untouched">*Enter valid password</small>
     </div>
-    <button class="btn" mat-button mat-dialog-close="true" [disabled]="loginDetail.invalid" routerLink="/books">LOGIN</button>
+    <button class="btn" mat-button mat-dialog-close="true" [disabled]="loginDetail.invalid" (click)="loginUser()">LOGIN</button>
     <div class="calToact">
         <label for="">Don't have an account?</label>
         <button class="btn2" mat-button mat-dialog-close="true" (click)="signOpen()">SIGNUP</button>
