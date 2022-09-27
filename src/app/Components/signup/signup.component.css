@@ -13,6 +13,7 @@ form {
   border-radius: 5px;
   text-align: center;
 }
+small{ color: rgb(189, 7, 7);}
 .signup-frm h3 {
   font-weight: 600;
   color: rgb(40, 13, 53);
