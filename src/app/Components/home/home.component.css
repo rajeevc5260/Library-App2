@@ -1,0 +1,41 @@
+.home {
+  background-image: url(../../../assets/images/fluid.png);
+}
+.home-heading {
+  height: 90vh;
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.home-heading img {
+  height: 30rem;
+  border-radius: 5px;
+  box-shadow: 10px 15px 90px 10px rgba(58, 15, 175, 0.651);
+}
+.home-heading h1 {
+  font-weight: 900;
+  text-align: center;
+  margin-left: 40px;
+  color: rgb(58, 15, 175);
+}
+
+@media (max-width: 768px) {
+  .home-heading {
+    margin-top: 60px;
+    text-align: center;
+    display: block;
+    height: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .home-heading img {
+    height: 15rem;
+  }
+  .home-heading h1 {
+    font-weight: 600;
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+}

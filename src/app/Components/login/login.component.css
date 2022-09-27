@@ -1,0 +1,42 @@
+.login-frm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    background-image: linear-gradient(
+      to right,
+      rgb(110, 6, 196),
+      rgb(144, 18, 175)
+    );
+    padding: 40px 100px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .login-frm h3 {
+    font-weight: 600;
+    color: rgb(40, 13, 53);
+  }
+  mat-icon {
+    height: auto;
+    width: auto;
+    color: rgb(219, 194, 229);
+    font-size: 90px;
+  }
+  .btn {
+    background-color: rgb(70, 3, 133);
+    color: #fff;
+    padding: 0px 30px;
+  }
+  .btn:hover {
+    color: #fff;
+    background-color: rgb(88, 8, 163);
+  }
+  .calToact {
+    margin-top: 30px;
+  }
+  .calToact button {
+    color: rgb(103, 128, 143);
+    font-weight: 600;
+  }
+  

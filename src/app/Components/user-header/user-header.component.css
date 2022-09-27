@@ -1,0 +1,44 @@
+.navbar {
+  background-image: linear-gradient(
+    to right,
+    rgb(110, 6, 196),
+    rgb(144, 18, 175)
+  );
+  color: white;
+  flex: 1 1 auto;
+  padding-right: 25px;
+  padding-left: 20px;
+}
+.logo {
+  display: flex;
+}
+.logo h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 30px;
+  color: rgb(242, 235, 252);
+  margin-left: 8px;
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+.navbar img {
+  height: 40px;
+}
+.navbar .signUp {
+  background-color: rgb(105, 18, 187);
+}
+.logout-btn {
+  background-color: rgb(105, 18, 187);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .logo h1 {
+    font-size: 25px;
+  }
+  .navbar img {
+    height: 35px;
+  }
+}
