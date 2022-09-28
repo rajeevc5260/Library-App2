@@ -129,7 +129,11 @@ app.get("/", function (req, res) {
 });
 
 app.listen(process.env.PORT || 3000, () => {
+<<<<<<< HEAD
   console.log("Server Ready on 3000");
+=======
+  console.log("Server Ready on 3000"); 
+>>>>>>> e7437f659daef5f290f5b6f944e19a7bc26c50bf
 });
 
 // app.listen(PORT, () => {
