@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PatternValidator, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Services/auth.service';
 import { LoginComponent } from '../login/login.component';
 
@@ -14,12 +15,12 @@ export class SignupComponent implements OnInit {
     name: '',
     email: '',
     password: '',
-    confirmPassword:'',
+    confirmPassword: '',
   };
 
   constructor(
     private dialogePopUp: MatDialog,
-    private authServices: AuthService
+    private authServices: AuthService,
   ) {}
 
   loginOpen() {

@@ -11,6 +11,7 @@
       <small [class.d-none]="password.valid || password.untouched">*Enter valid password</small>
     </div>
     <button class="btn" mat-button mat-dialog-close="true" [disabled]="loginDetail.invalid" (click)="loginUser()">LOGIN</button>
+    <p>username:admin@gmail.com password:Admin@123</p>
     <div class="calToact">
         <label for="">Don't have an account?</label>
         <button class="btn2" mat-button mat-dialog-close="true" (click)="signOpen()">SIGNUP</button>
