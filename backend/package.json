@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.14.0"
+  },
   "scripts": {
     "start": "nodemon ./index.js --exec babel-node e js ",
     "test": "echo \"Error: no test specified\" && exit 1"

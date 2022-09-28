@@ -5,7 +5,7 @@ const booksData = require("./src/model/booksData");
 const jwt = require("jsonwebtoken");
 
 const app = express();
-const PORT = 3000;
+// const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -124,6 +124,14 @@ app.post("/login", (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.get("/", function (req, res) {
+  res.render("index", {});
 });
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server Ready on 3000");
+});
+
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
