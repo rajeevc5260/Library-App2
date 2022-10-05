@@ -9,12 +9,12 @@ export class AuthService {
 
   // login
   loginUser(user: any) {
-    return this.http.post<any>('https://library-app02.herokuapp.com/login', user)
+    return this.http.post<any>('http://localhost:3000', user)
 
   }
 
   // Signup data
   signUp(logData: any) {
-    return this.http.post<any>('https://library-app02.herokuapp.com/signUp', logData);
+    return this.http.post<any>('http://localhost:3000', logData);
   }
 }
